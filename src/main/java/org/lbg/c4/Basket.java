@@ -29,5 +29,8 @@ public class Basket
         }
         return total;
     }
+    public Item getLastItem(){
+        return itsItems.get(itsItems.size() -1);
+    }
 
 }
