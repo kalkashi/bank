@@ -3,6 +3,7 @@ package tdd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class HighestNumberFinderTest {
     @Test
@@ -15,5 +16,73 @@ public class HighestNumberFinderTest {
 
         assertEquals(expectedResult,actualResult);
     }
+
+    @Test
+    public  void    find_highest_in_array_of_two_descending_expect_first_element(){
+        int input[] = {13,7};
+        HighestNumberFinder cut = new HighestNumberFinder();
+        int expectedResult = 13;
+
+        int actualResult = cut.findHighestNumber(input);
+
+        assertEquals(expectedResult,actualResult);
+    }
+
+    @Test
+    public  void    find_highest_in_array_of_two_ascending_expect_second_element(){
+        int input[] = {7,13};
+        HighestNumberFinder cut = new HighestNumberFinder();
+        int expectedResult = 13;
+
+        int actualResult = cut.findHighestNumber(input);
+
+        assertEquals(expectedResult,actualResult);
+    }
+
+    @Test
+    public void find_highest_in_array_if_several_equal_and_max(){
+        int input[] = {2,23,4,23,23,1};
+        HighestNumberFinder cut = new HighestNumberFinder();
+        int expectedResult = 23;
+
+        int actualResult = cut.findHighestNumber(input);
+
+        assertEquals(expectedResult,actualResult);
+    }
+
+//    @Test
+//    public void find_highest_in_array_if_negative(){
+//        int input[] = {-2,-23,-4,-23,-23,-1};
+//        HighestNumberFinder cut = new HighestNumberFinder();
+//        int expectedResult = -1;
+//
+//        int actualResult = cut.findHighestNumber(input);
+//
+//        assertEquals(expectedResult,actualResult);
+//    }
+
+//    @Test
+//    public void find_highest_in_empty_array(){
+//        int input[] = {};
+//        HighestNumberFinder cut = new HighestNumberFinder();
+//        int expectedResult = ;
+//
+//        int actualResult = cut.findHighestNumber(input);
+//
+//        assertEquals(expectedResult,actualResult);
+//    }
+
+//    @Test
+//    public void find_highest_in_empty_array() {
+//        int input[] = {};
+//        HighestNumberFinder cut = new HighestNumberFinder();
+//        assertThrows(NullPointerException.class,
+//                ()->{
+//
+//                });
+//    }
+
+
+
 
 }

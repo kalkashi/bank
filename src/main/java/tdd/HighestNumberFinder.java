@@ -1,8 +1,10 @@
 package tdd;
 
+import java.util.Arrays;
+
 public class HighestNumberFinder {
 
     public int findHighestNumber(int[] input){
-        return input[0];
+        return Arrays.stream(input).max().getAsInt();
     }
 }
