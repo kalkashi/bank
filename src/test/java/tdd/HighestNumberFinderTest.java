@@ -3,6 +3,7 @@ package tdd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class HighestNumberFinderTest {
@@ -61,27 +62,34 @@ public class HighestNumberFinderTest {
         assertEquals(expectedResult,actualResult);
     }
 
-//    @Test
-//    public void find_highest_in_empty_array(){
-//        int input[] = {};
-//        HighestNumberFinder cut = new HighestNumberFinder();
-//        int expectedResult = ;
-//
-//        int actualResult = cut.findHighestNumber(input);
-//
-//        assertEquals(expectedResult,actualResult);
-//    }
+
+
+    @Test
+    public void find_highest_in_empty_array() {
+        int input[] = {};
+        HighestNumberFinder cut = new HighestNumberFinder();
+
+        Exception e = assertThrows(IllegalArgumentException.class,() -> {
+            cut.findHighestNumber(input);
+        });
+
+        assertEquals("Array must not be empty",e.getMessage());
+
+    }
 
 //    @Test
-//    public void find_highest_in_empty_array() {
+//    public void find_highest_in_empty_array_should_throw_exception() {
+//        // Arrange
 //        int input[] = {};
 //        HighestNumberFinder cut = new HighestNumberFinder();
-//        assertThrows(NullPointerException.class,
-//                ()->{
-//
-//                });
+//        // Act
+//        try {
+//            cut.findHighestNumber(input);
+//            fail("Expected IllegalArgumentException to be thrown");
+//        } catch (IllegalArgumentException e) {
+//            assertEquals("Array must not be empty", e.getMessage());
+//        }
 //    }
-
 
 
 
