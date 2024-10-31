@@ -50,16 +50,16 @@ public class HighestNumberFinderTest {
         assertEquals(expectedResult,actualResult);
     }
 
-//    @Test
-//    public void find_highest_in_array_if_negative(){
-//        int input[] = {-2,-23,-4,-23,-23,-1};
-//        HighestNumberFinder cut = new HighestNumberFinder();
-//        int expectedResult = -1;
-//
-//        int actualResult = cut.findHighestNumber(input);
-//
-//        assertEquals(expectedResult,actualResult);
-//    }
+    @Test
+    public void find_highest_in_array_if_negative(){
+        int input[] = {-2,-23,-4,-23,-23,-1};
+        HighestNumberFinder cut = new HighestNumberFinder();
+        int expectedResult = -1;
+
+        int actualResult = cut.findHighestNumber(input);
+
+        assertEquals(expectedResult,actualResult);
+    }
 
 //    @Test
 //    public void find_highest_in_empty_array(){
