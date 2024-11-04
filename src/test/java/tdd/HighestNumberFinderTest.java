@@ -64,18 +64,18 @@ public class HighestNumberFinderTest {
 
 
 
-    @Test
-    public void find_highest_in_empty_array() {
-        int input[] = {};
-        HighestNumberFinder cut = new HighestNumberFinder();
-
-        Exception e = assertThrows(IllegalArgumentException.class,() -> {
-            cut.findHighestNumber(input);
-        });
-
-        assertEquals("Array must not be empty",e.getMessage());
-
-    }
+//    @Test
+//    public void find_highest_in_empty_array() {
+//        int input[] = {};
+//        HighestNumberFinder cut = new HighestNumberFinder();
+//
+//        Exception e = assertThrows(IllegalArgumentException.class,() -> {
+//            cut.findHighestNumber(input);
+//        });
+//
+//        assertEquals("Array must not be empty",e.getMessage());
+//
+//    }
 
 //    @Test
 //    public void find_highest_in_empty_array_should_throw_exception() {

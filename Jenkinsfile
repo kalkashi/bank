@@ -20,7 +20,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Packge'){
+        stage('Package'){
             steps{
                 sh 'mvn -Dmaven.test.skip -Dmaven.compile.skip package'
             }
