@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    registry = "kalikidhar/vatcal"
+    registry = "kalikidhar/bank_app"
         registryCredentials = "dockerhub_id"
         dockerImage = ""
     }
